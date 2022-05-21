@@ -1,7 +1,8 @@
 #medal-card,
 #chat-badges
   display: none !important
-
+yt-live-chat-renderer
+  background: none
 yt-live-chat-ticker-renderer
   display: none
 yt-live-chat-text-message-renderer,
@@ -60,7 +61,7 @@ yt-live-chat-text-message-renderer
       font-size: 18px
       line-height: 22px
       height: 48px
-      width: 240px
+      width: 320px
       font-weight: bold
       background-color: #0000
       & > #message
@@ -210,18 +211,31 @@ yt-live-chat-membership-item-renderer
 
 yt-live-chat-paid-message-renderer[giftname="superchat"]
   #card.yt-live-chat-paid-message-renderer
-    height: 171px
-    background-position: center
+    height: 190px
+    background-position: top center
     background-size: 503px 171px
     background-image: url('./img/superchat.png')
     #header
       position: absolute
-      right: 0
+      right: -10px
       bottom: 0
+      --text-size: 15px
+      --line-height: 18px
       #header-content-primary-column
+        box-sizing: border-box
+        padding: 18px 60px 28px 28px
         flex-flow: row
+        align-items: center
+        justify-content: space-between
         font-size: var(--text-size)
-        line-height: 30px
+        line-height: var(--line-height)
+        width: 276px
+        height: 72px
+        background-repeat: no-repeat
+        background-position: center
+        background-image: url('./img/scid.png')
+        #author-name
+          line-height: var(--line-height)
         #author-name::before
           display: none
         #purchase-amount#purchase-amount
@@ -231,8 +245,12 @@ yt-live-chat-paid-message-renderer[giftname="superchat"]
       left: 30px
       top: 30px
       right: 35px
-      bottom: 35px
+      height: 105px
       display: flex
       flex-flow: column nowrap
       align-items: center
       justify-content: center
+      #message:empty
+        display: block
+        &::before
+          content: '感谢这位沉默寡言的大佬的SC'

@@ -1,0 +1,193 @@
+yt-live-chat-membership-item-renderer {
+  height: 118px;
+  padding: 0 !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 490px 118px;
+  background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/tqYRvZs89X.png');
+  --text-size: 20px;
+  --text-color: white;
+  --margin-between: 5px;
+  text-shadow: -1px 1px 2px #E36786, 1px 1px 2px #E36786, 1px -1px 2px #E36786, -1px -1px 2px #E36786, -1px 0 2px #E36786, 0 1px 2px #E36786, 1px 0 2px #E36786, 0 -1px 2px #E36786;
+
+  #card.yt-live-chat-membership-item-renderer {
+    height: 100%;
+    box-shadow: none;
+  }
+
+  .yt-live-chat-membership-item-renderer {
+    background-color: #0000 !important
+  }
+
+  #author-photo#author-photo {
+    display: none;
+  }
+
+  #header.yt-live-chat-membership-item-renderer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  #header-content.yt-live-chat-membership-item-renderer {
+    position: relative;
+    flex-grow: 0;
+    flex-basis: auto;
+    margin: 0 auto;
+    justify-content: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -4px;
+      height: 0.5px;
+      background-color: white;
+      border: 1px solid #E36786;
+      box-shadow: 0 0 4px #E36786;
+    }
+  }
+
+  #header-content-primary-column {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #header-content yt-live-chat-author-chip {
+    display: block;
+    position: relative;
+    color: var(--text-color) !important;
+    font-size: var(--text-size) !important;
+    margin-right: var(--margin-between);
+    font-weight: bold;
+    line-height: 30px;
+    height: 30px;
+
+
+    &::before {
+      content: '感谢';
+      margin-right: var(--margin-between);
+    }
+
+    #author-name {
+      font-weight: bold;
+    }
+  }
+
+  #header-subtext.yt-live-chat-membership-item-renderer {
+    margin-top: 0;
+    height: 30px;
+    line-height: 30px;
+    color: var(--text-color) !important;
+    font-size: 0 !important;
+
+    &::before {
+      font-weight: bold;
+      font-size: var(--text-size) !important;
+      content: '成为了';
+      margin-right: var(--margin-between);
+    }
+
+    &::after {
+      font-weight: bold;
+      font-size: var(--text-size) !important;
+    }
+  }
+
+  &[privilegetype="1"] #header-subtext::after {
+    content: '总督大人';
+  }
+
+  &[privilegetype="2"] #header-subtext::after {
+    content: '提督大人';
+  }
+
+  &[privilegetype="3"] #header-subtext::after {
+    content: '舰长大人';
+  }
+}
+
+yt-live-chat-app yt-live-chat-membership-item-renderer {
+  height: 149px;
+  --text-size: 16px;
+  background-size: 490px 149px;
+  background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/YrxTw3TO8a.png');
+
+
+  #header,
+  #header-content {
+    width: 100%;
+    height: 100%;
+    display: block !important;
+    position: absolute !important;
+  }
+
+  #header-content::after {
+    display: none;
+  }
+
+  yt-live-chat-author-chip {
+    position: absolute !important;
+    left: 21px;
+    top: 37px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      font-weight: bold;
+      font-size: var(--text-size) !important;
+      content: 'さん';
+      margin-left: var(--margin-between);
+    }
+  }
+
+  #header-content-primary-column {
+    width: 100%;
+    height: 100%;
+  }
+
+  #header-primary-text {
+    position: absolute;
+    display: block !important;
+    right: 25px;
+    bottom: 40px;
+    font-weight: bold;
+    font-size: var(--text-size) !important;
+
+    &::after {
+      display: inline;
+      content: 'ありがとうにゃのー！';
+    }
+  }
+
+  #header-subtext {
+    display: none;
+  }
+
+  #content {
+    box-sizing: border-box;
+    padding: 60px 20px !important;
+    width: 100%;
+    height: 100%;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    #message {
+      margin: 0 auto;
+    }
+
+    #message:empty::after {
+      display: inline;
+      content: 'メンバーシップへようこそ！';
+    }
+  }
+}

@@ -1,0 +1,38 @@
+yt-live-chat-paid-message-renderer[giftname]:not([giftname=superchat]) {
+  box-sizing: border-box;
+  padding: 0 0 4px !important;
+  height: 88px;
+  background-position: center;
+  background-size: 498px 88px;
+  background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/TlLb2TjIBq.png');
+
+  #header {
+    position: static;
+    width: auto;
+    background-image: none;
+
+    #header-content {
+      padding: 0;
+      --text-size: 20px;
+      --line-height: 30px;
+
+      #author-name {
+        font-weight: bold;
+        margin-right: var(--margin-between);
+
+        &::before {
+          content: '感谢';
+          margin-right: var(--margin-between);
+        }
+      }
+
+      #purchase-amount {
+        display: none;
+      }
+    }
+  }
+
+  #content {
+    position: static;
+  }
+}

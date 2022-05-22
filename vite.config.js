@@ -9,4 +9,7 @@ export default defineConfig({
       fileName: (format) => `output.${format}.js`
     },
   },
+  server: {
+    open: '/bilibili.html'
+  }
 })

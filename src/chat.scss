@@ -1,0 +1,167 @@
+yt-live-chat-text-message-renderer {
+  overflow: visible !important;
+  contain: none !important;
+  padding: 0 !important;
+  height: 110px;
+  background-repeat: no-repeat;
+  background-position: right 2px;
+  background-size: 468px 101px;
+  background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/Rhdpnv2jRH.png');
+
+  yt-img-shadow.yt-live-chat-text-message-renderer#author-photo {
+    position: absolute;
+    left: 17px;
+    top: 6px;
+    width: 103px;
+    height: 108px;
+    opacity: 1;
+    border-radius: 0;
+    overflow: visible;
+
+    img {
+      position: absolute;
+      left: 18.5px;
+      top: 18.5px;
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/uBnwjai9hG.png');
+    }
+  }
+
+  #content {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    left: 120px;
+    top: 40px;
+    height: 48px;
+    width: 320px;
+
+    #timestamp {
+      display: none;
+    }
+
+    yt-live-chat-author-chip {
+      display: block;
+      width: 0;
+      font-size: 0;
+      margin-right: 0;
+
+      #author-name {
+        position: absolute;
+        left: 0;
+        top: -27.5px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: bold;
+        background-color: #0000;
+        color: #F96693 !important;
+      }
+    }
+
+
+    #message {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #F96693 !important;
+      overflow: visible !important;
+    }
+
+    #image-and-message {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      height: 100%;
+      background-color: #0000;
+    }
+  }
+
+  &[author-type=member] #content,
+  &[author-type=owner] #content {
+
+    #author-name,
+    #message {
+      color: white !important;
+      text-shadow: -1px 1px 2px #E36786, 1px 1px 2px #E36786, 1px -1px 2px #E36786, -1px -1px 2px #E36786, -1px 0 2px #E36786, 0 1px 2px #E36786, 1px 0 2px #E36786, 0 -1px 2px #E36786;
+      filter: drop-shadow(0 0 2px #F96693);
+    }
+  }
+
+  &[author-type=owner] yt-img-shadow#author-photo {
+    width: 124px;
+    height: 118px;
+
+    &::after {
+      left: -12px;
+      top: -9px;
+      background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/2rb0tOt55w.png');
+    }
+  }
+
+  &[author-type=member] yt-img-shadow#author-photo {
+    width: 110px;
+    height: 116px;
+
+    &::after {
+      left: -5px;
+      top: -8px;
+      background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/8HAprdxVYn.png');
+    }
+  }
+
+  &[privilegetype="1"] yt-img-shadow#author-photo {
+    width: 123px;
+    height: 117px;
+
+    &::after {
+      left: -12px;
+      top: -7px;
+      background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/P9ukwSKtod.png');
+    }
+  }
+
+  &[privilegetype="2"] yt-img-shadow#author-photo {
+    width: 108px;
+    height: 117px;
+
+    &::after {
+      left: -6px;
+      top: -7px;
+      background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/ki2YhgHdWY.png');
+    }
+  }
+
+
+  &[author-type=owner] {
+    background-size: 468px 110px;
+    background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/QB573jOqpU.png');
+  }
+
+  &[author-type=member] {
+    background-size: 468px 101px;
+    background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/8ZQa9fvdOM.png');
+  }
+
+  &[privilegetype="1"] {
+    background-size: 468px 110px;
+    background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/R5o8mzdevM.png');
+  }
+
+  &[privilegetype="2"] {
+    background-size: 477px 115px;
+    background-image: url('https://activity.hdslb.com/blackboard/static/c756e97c1608d92c11ae26d0ae020972/xpjxw838ds.png');
+  }
+
+}
